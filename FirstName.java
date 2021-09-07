@@ -11,7 +11,7 @@ public class FirstName {
     }
 
     private static void validate(String firstName) {
-        String regex = "^[A-z][a-z]{2}";
+        String regex = "^[A-Z][a-z]{2}";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(firstName);
         System.out.println("is valid: " +matcher.matches());

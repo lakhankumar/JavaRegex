@@ -25,7 +25,7 @@ public class Regex{
     }
 
     private static void validatePassword(String password) {
-        String passwordRegex = "^[A-Za-z]{8,20}";
+        String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z]).{8,20}$";
         Pattern pattern = Pattern.compile(passwordRegex);
         Matcher matcher = pattern.matcher(password);
         System.out.println("is valid password: " +matcher.matches());

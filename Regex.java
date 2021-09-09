@@ -11,10 +11,22 @@ public class Regex{
         String lastName = scan.nextLine();
         System.out.println("Enter user email");
         String email = scan.next();
+        scan.nextLine();
+        System.out.println("Enter your phone number");
+        String phoneNumber = scan.nextLine();
 
         validateFirstName(firstName);
         validateLastName(lastName);
         validateUserEmail(email);
+        validatePhoneNumber(phoneNumber);
+    }
+
+    public static boolean validatePhoneNumber(String phoneNumber) {
+        String phoneRegex = "^[0-9]{2}\\s{1}[0-9]{10}";
+        Pattern pattern = Pattern.compile(phoneRegex);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        System.out.println("is valid phone number: " +matcher.matches());
+        return matcher.matches();
     }
 
     public static boolean validateUserEmail(String email) {

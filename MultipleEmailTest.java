@@ -51,6 +51,6 @@ public class MultipleEmailTest {
 
     @Test
     public void inputEmailTest() {
-        Assert.assertEquals(this.expected, emailValidation.validateUserEmail(email));
+        Assert.assertEquals(this.expected, UserRegistration.validateUserEmail(email));
     }
 }
